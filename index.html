@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap avançado</title>
+
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+
+    <style>
+        .container{
+            max-width: 1024px;
+            width: 100%;
+        }
+
+        .row{
+            display: grid;
+            grid-template-columns: repeat(3, 33.4%);
+        }
+
+        body{
+            background-color: #ccc;
+        }
+
+        .col{
+            margin-bottom: 2vh;
+        }
+
+        @media screen and (max-width: 767px){
+            .row{
+                display: block;
+                max-width: 85%;
+                margin-left: 8%;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px){
+            .row{
+                display: grid;
+                grid-template-columns: repeat(2, 50%);               
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container mb-4">
+        <div id="carousel-imagens" class="carousel carousel-fade slide mt-2" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="2000" class="carousel-item active">
+                    <img class="d-block w-100" src="images/desert-8041047_640.jpg" alt="imagem do deserto">
+                    <div class="carousel-caption">
+                        <h2>Foto de um Deserto</h2>
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item">
+                    <img class="d-block w-100" src="images/mountains-8031511_640.jpg" alt="imagem da montanha">
+                    <div class="carousel-caption">
+                        <h2>Foto da Montanha</h2>
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item">
+                    <img class="d-block w-100" src="images/lake-8030021_640.jpg" alt="imagem de um lago">
+                    <div class="carousel-caption">
+                        <h2>Foto de um Lago</h2>
+                    </div>
+                </div>
+            </div>
+            <button data-bs-target="#carousel-imagens" data-bs-slide="prev" class="carousel-control-prev" type="button">
+            <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-target="#carousel-imagens" data-bs-slide="next" class="carousel-control-next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-imagens" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carousel-imagens" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-imagens" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <article class="card">
+                    <header class="card-header">
+                        Iguana
+                    </header>
+                    <img src="images/iguana-8084900_640.jpg" alt="imagem de uma iguana">
+                    <div class="card-body">
+                        <h4 class="card-title">Uma Iguana atenta</h4>
+                        <h5 class="card-subtitle">A procura de comida</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dolores sit molestias. Beatae culpa nam veniam esse totam praesentium assumenda placeat facere quibusdam fugit laudantium aperiam quidem, amet iusto doloremque.</p>
+                        <a href="#" class="btn btn-primary">Leia mais</a>
+                    </div>
+                    <footer class="card-footer">
+                        Postado em <time>04/07/2023 às 21:30</time>
+                    </footer>
+            </article>
+            </div>
+            <div class="col">
+                <article class="card">
+                    <header class="card-header">
+                        Lobo
+                    </header>
+                    <img src="images/wolf-8089783_640.jpg" alt="imagem de um lobo">
+                    <div class="card-body">
+                        <h4 class="card-title">Um lobo esperto</h4>
+                        <h5 class="card-subtitle">Um olhar feroz</h5>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quo amet adipisci. Iure fuga provident aut qui vero ad id exercitationem inventore natus, nulla repellat aliquam. Maxime nihil sit quas.</p>
+                        <a href="#" class="btn btn-primary">Leia mais</a>
+                    </div>
+                    <footer class="card-footer">
+                        Postado em <time>04/07/2023 às 22:00</time>
+                    </footer>
+            </article>
+            </div>
+            <div class="col">
+                <article class="card">
+                    <header class="card-header">
+                        Pombo
+                    </header>
+                    <img src="images/pigeon-8028951_640.jpg" alt="imagem de um pombo">
+                    <div class="card-body">
+                        <h4 class="card-title">Dia a dia de um pombo</h4>
+                        <h5 class="card-subtitle">Sua alimentação</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, dolorem. Aut eligendi velit perferendis sunt, sequi maiores perspiciatis molestiae. Assumenda iure repellat inventore illum accusantium dolores libero ratione perferendis exercitationem?</p>
+                        <a href="#" class="btn btn-primary">Leia mais</a>
+                    </div>
+                    <footer class="card-footer">
+                        Postado em <time>04/07/2023 às 22:30</time>
+                    </footer>
+            </article>
+            </div>
+            <div class="col">
+                <article class="card">
+                    <header class="card-header">
+                        Iceberg
+                    </header>
+                    <img src="images/iceberg-7994536_640.jpg" alt="imagem de um iceberg">
+                    <div class="card-body">
+                        <h4 class="card-title">Um Iceberg</h4>
+                        <h5 class="card-subtitle">Riscos de colisão</h5>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur libero laudantium in, labore consectetur vitae a error provident beatae, dignissimos accusantium quis quam ex saepe odit consequatur, adipisci eaque minus.</p>
+                        <a href="#" class="btn btn-primary">Leia mais</a>
+                    </div>
+                    <footer class="card-footer">
+                        Postado em <time>04/07/2023 às 23:00</time>
+                    </footer>
+            </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
